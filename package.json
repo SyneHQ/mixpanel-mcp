@@ -1,11 +1,14 @@
 {
-  "name": "mcp-mixpanel",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "@synehq/mcp-mixpanel",
+  "version": "1.0.3",
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "build/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc && node -e \"require('fs').chmodSync('build/index.js', '755')\"",
-    "postinstall": "npm run build"
+    "build": "tsup",
+    "start": "node build/index.js"
   },
   "keywords": [],
   "author": "",
@@ -13,15 +16,23 @@
   "description": "",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.6.1",
+    "@synehq/mcp-mixpanel": "^1.0.3",
+    "@types/express": "^5.0.1",
+    "express": "^5.1.0",
     "zod": "^3.24.2"
   },
   "devDependencies": {
     "@types/node": "^22.13.5",
+    "tsup": "^8.4.0",
     "typescript": "^5.8.2"
   },
   "type": "module",
+  "types": "build/index.d.ts",
+  "exports": {
+    ".": "./build/index.js"
+  },
   "bin": {
-    "mcp-mixpanel": "./build/index.js"
+    "mcp-mixpanel": "build/index.js"
   },
   "files": [
     "build"
