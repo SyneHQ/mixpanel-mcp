@@ -6,4 +6,6 @@ export default defineConfig({
   dts: true,
   clean: true,
   outDir: 'build',
+  minify: true,
+  bundle: true,
 });

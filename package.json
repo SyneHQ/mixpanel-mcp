@@ -1,6 +1,6 @@
 {
   "name": "@synehq/mcp-mixpanel",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "publishConfig": {
     "access": "public"
   },
@@ -16,15 +16,14 @@
   "description": "",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.6.1",
-    "@synehq/mcp-mixpanel": "^1.0.3",
-    "@types/express": "^5.0.1",
     "express": "^5.1.0",
     "zod": "^3.24.2"
   },
   "devDependencies": {
     "@types/node": "^22.13.5",
     "tsup": "^8.4.0",
-    "typescript": "^5.8.2"
+    "typescript": "^5.8.2",
+    "@types/express": "^5.0.1"
   },
   "type": "module",
   "types": "build/index.d.ts",
